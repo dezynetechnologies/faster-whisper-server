@@ -84,3 +84,6 @@ Live transcribing audio data from a microphone.
 ```bash
 ffmpeg -loglevel quiet -f alsa -i default -ac 1 -ar 16000 -f s16le - | websocat --binary ws://localhost:8000/v1/audio/transcriptions
 ```
+
+  153  export WHISPER__MODEL=Systran/faster-distil-whisper-large-v3
+  154  export WHISPER__INFERENCE_DEVICE=auto
